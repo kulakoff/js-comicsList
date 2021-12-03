@@ -1,0 +1,36 @@
+:root {
+  --color-dark: #222222;
+  --color-blue: #3199d7;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-dark);
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  scrollbar-color: var(--color-blue) var(--color-dark);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--color-dark);
+}
