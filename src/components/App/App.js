@@ -1,4 +1,4 @@
-import Comics from "../comics/Comics";
+import Comics from "../Comics/Comics";
 import "./App.css";
 
 class App {

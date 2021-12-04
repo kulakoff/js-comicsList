@@ -12,6 +12,8 @@
   transition: 0.5s;
   background-color: var(--color-light);
   cursor: pointer;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .comics__item:hover {
@@ -27,4 +29,6 @@
 
 .comics__img {
   width: 100%;
+  /* margin-bottom: var(--spacing-large); */
 }
+

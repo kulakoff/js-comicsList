@@ -2,10 +2,14 @@
   --color-dark: #222222;
   --color-blue: #3199d7;
   --color-light: #f8f9fa;
+  --color-white: #fff;
+  --color-black: #000;
 
   --spacing-small: 10px;
   --spacing-medium: 15px;
   --spacing-large: 20px;
+
+  --box-shadow: 0 2px 24px rgba(168, 175, 196, 0.5);
 }
 
 *,
@@ -38,4 +42,22 @@ body {
 }
 ::-webkit-scrollbar-track {
   background-color: var(--color-dark);
+}
+
+:global(.btn) {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+:global(.img-contain) {
+  display: block;
+  object-fit: contain;
+  object-position: center;
+}
+:global(.img-cover) {
+  display: block;
+  object-fit: cover;
+  object-position: center;
 }
