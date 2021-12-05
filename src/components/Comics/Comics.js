@@ -11,7 +11,7 @@ import { ROOT_INDEX } from "../../constants/root";
 import Characters from "../Characters";
 import Error from "../Error";
 
-import clases from "./Comics.css";
+import classes from "./Comics.css";
 
 class Comics {
   renderComics(data) {
@@ -21,16 +21,16 @@ class Comics {
         const uri = API_URL + URL_COMICS + "/" + id + "/" + URL_CHARACTERS;
         const imgSrc = path + "/" + IMG_STANDART_XLARGE + "." + extension;
         htmlContent += `
-        <li class="comics__item ${clases.comics__item}" data-uri="${uri}">
-        <span class="${clases.comics__name}">${title}</span>
-        <img class="img-contain ${clases.comics__img}" src="${imgSrc}"/>
+        <li class="comics__item ${classes.comics__item}" data-uri="${uri}">
+        <span class="${classes.comics__name}">${title}</span>
+        <img class="img-contain ${classes.comics__img}" src="${imgSrc}"/>
         </li>
         `;
       }
     });
 
     const htmpWrapper = `
-    <ul class="${clases.comics__container}">
+    <ul class="${classes.comics__container}">
     ${htmlContent}
     </ul>
     `;
