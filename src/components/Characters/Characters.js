@@ -1,6 +1,8 @@
 import { getDataApi } from "../../utils/getDataApi";
 import { IMG_STANDART_XLARGE } from "../../constants/api";
 import { ROOT_MODAL } from "../../constants/root";
+
+import Notification from "../Notification";
 import classes from "./Characters.css";
 class Characters {
   renderContent(data) {
@@ -10,7 +12,7 @@ class Characters {
       console.log(imgSrc);
       htmlContent += `
       <li class="${classes.charectors__item}">
-      <img class="img-cover ${classes.charectors__img}" src="${imgSrc}"/>
+      <img class="img-cover bg-contain ${classes.charectors__img}" src="${imgSrc}"/>
       <span class="${classes.charectors__name}">${name}</span>
       </li>
       `;
@@ -20,6 +22,10 @@ class Characters {
         <ul class="${classes.charectors__container}">
             ${htmlContent}
         </ul>
+        <button
+            class="btn bg-contain ${classes.charectors__close}"
+            onclick="modal.innerHTML=''"
+        ></button>
     </div>
 
 `;
@@ -27,13 +33,13 @@ class Characters {
     ROOT_MODAL.innerHTML = htmlWrapper;
   }
 
-  renderNotification(data) {
-    console.log("content is null: ", data);
-  }
+  // renderNotification(data) {
+  //   console.log("content is null: ", data);
+  // }
 
   async render(uri) {
     const data = await getDataApi.getData(uri);
-    data.length ? this.renderContent(data) : this.renderNotification(data);
+    data.length ? this.renderContent(data) : Notification.render();
   }
 }
 

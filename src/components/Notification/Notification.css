@@ -1,0 +1,18 @@
+.notification__container {
+    position: fixed;
+    bottom: var(--spacing-large);
+    left:var(--spacing-large);
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-medium) var(--spacing-large);
+    border: 1px sold var(--color-black);
+    background-color:var(--color-white);
+}
+
+.notification__close {
+  background-image: url("https://img.icons8.com/ios/50/000000/close-window.png");
+  width: 30px;
+  height: 30px;
+  margin-left: var(--spacing-large);
+}
+
